@@ -11,4 +11,5 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void {}
 
   name = 'First Component';
+  age: number = 12;
 }
