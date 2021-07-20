@@ -1,1 +1,28 @@
-{{name}}
+<!-- {{oneWayDataBinding}} -->
+
+
+
+<!-- <div>
+    <button (click)="showMyName()">Show My Name</button>
+</div>
+<p>{{name}}</p> -->
+
+
+<div style="text-align: center;">
+    <button (click)="increment()">+</button>
+    {{number}}
+    <button (click)="decrement()">-</button>
+    &nbsp;
+    &nbsp;
+    <button (click)="reset()"> Reset</button>
+</div>
+
+<!-- subtract/-        button = value should decrement by 1
+number = 0
+add/+             button = value should increment by 1 -->
+
+<!-- attributes or properties -->
+
+<input name="name" [value]="name"/>
+
+<img [src]="src" width="400" height="100"/>
