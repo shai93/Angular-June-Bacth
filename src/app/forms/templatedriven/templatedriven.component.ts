@@ -10,7 +10,8 @@ export class TemplatedrivenComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submitForm() {
-    alert('form submitted');
+  //method
+  submitForm(formvalue: any) {
+    console.log(formvalue);
   }
 }
