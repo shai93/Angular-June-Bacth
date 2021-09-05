@@ -28,12 +28,13 @@
                 <div class="form-group row">
                     <label for="courses" class="col-sm-4 col-form-label">Select Course</label>
                     <div class="col-sm-8">
-                        <select class="form-control" id="courses" ngModel name="selectcourse" required>
-                            <option selected>--Select Course--</option>
-                            <option value="angular">Angular</option>
-                            <option value="react">React</option>
-                            <option value="node">Nodejs</option>
-                          </select>
+                        <select (change)="validateSelectBox(selectcourse.value)" (blur)="validateSelectBox(selectcourse.value)"  class="form-control" id="courses" ngModel name="selectcourse" required #selectcourse="ngModel">
+                            <option  value="*" selected>--Select Course--</option>
+                            <option  *ngFor="let course of courses" [value]="course">{{course}}</option>
+                        </select>
+                        <div *ngIf="registrationForm.submitted && hasSelectError" class="error-message">
+                            Select Course is a required field
+                        </div>
                     </div>
                 </div>
                 <fieldset class="form-group">
@@ -41,17 +42,20 @@
                         <legend class="col-form-label col-sm-4 pt-0">Time Preference</legend>
                         <div class="col-sm-8">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="timepreference" id="timepreference1"  ngModel value="morning" required>
+                                <input [ngClass] = "{'is-invalid': registrationForm.submitted && timepreference.invalid}" class="form-check-input" type="radio" name="timepreference" id="timepreference1"  ngModel value="morning" required #timepreference="ngModel">
                                 <label class="form-check-label" for="timepreference1">
                                     Morning Batch(9-11)AM
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="timepreference" id="timepreference2" ngModel value="evening" required>
+                                <input  [ngClass] = "{'is-invalid': registrationForm.submitted && timepreference.invalid}" class="form-check-input" type="radio" name="timepreference" id="timepreference2" ngModel value="evening" required #timepreference="ngModel">
                                 <label class="form-check-label" for="timepreference2">
                                     Evening Batch(6-8)AM
                                 </label>
                               </div>
+                              <div *ngIf="registrationForm.submitted && timepreference.invalid" class="error-message">
+                                Timepreference is a required field
+                            </div>
                         </div>
                     </div>
                 </fieldset>
