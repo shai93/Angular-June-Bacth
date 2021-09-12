@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.component';
+import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, TemplatedrivenComponent],
+  declarations: [AppComponent, FirstComponent, TemplatedrivenComponent, ReactiveformsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
