@@ -7,19 +7,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  firstNumber: number = 10;
-  secondNumber: number = 20;
+  firstNumber: number = 10; //property
+  secondNumber: number = 20; //proerty
+  parentValue: string = '';
+  showComponent: boolean = true;
 
   getName() {
+    //method
     return 'Shailesh Salekar';
   }
 
   displayName() {
+    //method
     this.getName();
   }
 
   add() {
+    //method
     return this.firstNumber + this.secondNumber;
+  }
+
+  submitValue(value: string) {
+    this.parentValue = value;
+  }
+
+  destroyChildCOmponent() {
+    this.showComponent = false;
   }
 }
 

@@ -13,8 +13,8 @@ export class ReactiveformsComponent implements OnInit {
 
   UserRegistrationForm = this.fb.group({
     userName: ['', Validators.required],
-    password: [],
-    confirmPassword: [],
+    password: ['', Validators.required],
+    confirmPassword: ['', Validators.required],
   });
 
   ngOnInit(): void {}

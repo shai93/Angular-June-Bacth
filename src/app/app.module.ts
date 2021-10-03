@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.component';
 import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.comp
     FirstComponent,
     TemplatedrivenComponent,
     ReactiveformsComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
