@@ -8,6 +8,7 @@ import { FirstComponent } from './first/first.component';
 import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.component';
 import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
 import { ChildComponent } from './child/child.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { ChildComponent } from './child/child.component';
     ReactiveformsComponent,
     ChildComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -7,6 +7,7 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
+import { MyserviceService } from '../myservice.service';
 
 @Component({
   selector: 'app-child',
@@ -18,9 +19,12 @@ export class ChildComponent
 {
   @Input('parentvalue') parentvalue: string = '';
   showComponent: boolean = true;
-  constructor() {
-    console.log('Constructor Called');
-  }
+  showDate: any;
+  // constructor() {
+  //   console.log('Constructor Called');
+  // }
+
+  constructor(private apiService: MyserviceService) {}
 
   //this will get executed when input value gets change.
   ngOnChanges() {
@@ -29,6 +33,7 @@ export class ChildComponent
 
   ngOnInit() {
     console.log('ngOnInit called');
+    this.showDate = this.apiService.getCurrentDate();
   }
 
   ngDoCheck() {
