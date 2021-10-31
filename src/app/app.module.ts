@@ -9,6 +9,8 @@ import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.c
 import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
 import { ChildComponent } from './child/child.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DepartmentsComponent } from './departments/departments.component';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     TemplatedrivenComponent,
     ReactiveformsComponent,
     ChildComponent,
+    DepartmentsComponent,
+    StudentsComponent,
   ],
   imports: [
     BrowserModule,

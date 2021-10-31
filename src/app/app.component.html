@@ -1,7 +1,7 @@
 <!-- <app-first></app-first> -->
 <!-- <app-templatedriven></app-templatedriven> -->
 <!-- <app-reactiveforms></app-reactiveforms> -->
-<input type="text" #parentInput/>
+<!-- <input type="text" #parentInput/>
 <button class="btn btn-primary" (click)="submitValue(parentInput.value)">Submit Value</button>
 <app-child [parentvalue]="parentValue" *ngIf="showComponent"></app-child>
 
@@ -13,4 +13,16 @@
 {{showDate}}
 
 
-<p><span>ID: {{postData?.id}}</span>: <span>Title: {{postData?.title}}</span></p>
+<p><span>ID: {{postData?.id}}</span>: <span>Title: {{postData?.title}}</span></p> -->
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/department" routerLinkActive="active">Department</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/student" routerLinkActive="active">Student</a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
+<!-- Router view goes here -->
