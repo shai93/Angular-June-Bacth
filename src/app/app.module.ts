@@ -11,6 +11,9 @@ import { ChildComponent } from './child/child.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DepartmentsComponent } from './departments/departments.component';
 import { StudentsComponent } from './students/students.component';
+import { AngularComponent } from './departments/angular/angular.component';
+import { ReactComponent } from './departments/react/react.component';
+import { AngularcoursesComponent } from './departments/angular/angularcourses/angularcourses.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { StudentsComponent } from './students/students.component';
     ChildComponent,
     DepartmentsComponent,
     StudentsComponent,
+    AngularComponent,
+    ReactComponent,
+    AngularcoursesComponent,
   ],
   imports: [
     BrowserModule,
